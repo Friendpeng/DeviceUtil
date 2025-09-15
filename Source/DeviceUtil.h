@@ -36,7 +36,7 @@ typedef NS_ENUM(NSUInteger, Platform) {
 - (NSString*)hardwareSimpleDescription;
 
 /// This method returns the hardware number not actual but logically. e.g. if the hardware string is 5,1 then hardware number would be 5.1
-- (float)hardwareNumber;
+// - (float)hardwareNumber;
 
 /// This method returns if we are running in the simulator
 - (BOOL)isSimulator;

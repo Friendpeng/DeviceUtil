@@ -32,7 +32,7 @@
       // pick the main bundle
       deviceUtilBundle = deviceUtilTopBundle;
     }
-    NSString *path = [deviceUtilBundle pathForResource:@"DeviceList" ofType:@"plist"];
+    NSString *path = [deviceUtilBundle pathForResource:@"DeviceListNew" ofType:@"plist"];
     deviceList = [NSDictionary dictionaryWithContentsOfFile:path];
     NSAssert(deviceList != nil, @"DevicePlist not found in the bundle.");
   }
@@ -135,19 +135,19 @@
   }
 }
 
-- (float)hardwareNumber {
-  NSString *hardware = [self hardwareString];
-  float version = [[[deviceList objectForKey:hardware] objectForKey:@"version"] floatValue];
-  if (version != 0.0f) {
-    return version;
-  }
-  else {
-    //log message that your device is not present in the list
-    [self logMessage:hardware];
+// - (float)hardwareNumber {
+//   NSString *hardware = [self hardwareString];
+//   float version = [[[deviceList objectForKey:hardware] objectForKey:@"version"] floatValue];
+//   if (version != 0.0f) {
+//     return version;
+//   }
+//   else {
+//     //log message that your device is not present in the list
+//     [self logMessage:hardware];
     
-    return 200.0f; //device might be new one of missing one so returning 200.0f
-  }
-}
+//     return 200.0f; //device might be new one of missing one so returning 200.0f
+//   }
+// }
 
 - (BOOL)isSimulator {
     return [self nativeHardware] == SIMULATOR;
