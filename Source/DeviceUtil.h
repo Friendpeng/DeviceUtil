@@ -45,7 +45,7 @@ typedef NS_ENUM(NSUInteger, Platform) {
 - (CGSize)backCameraStillImageResolutionInPixels;
 
 /// 调试使用
-- (NSString*)hardwareToDescription(NSString*)hardware;
+- (NSString*)hardwareToDescription:(NSString*)hardware;
 @end
 
 

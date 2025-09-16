@@ -106,7 +106,7 @@
 }
 
 /// 调试使用
-- (NSString*)hardwareToDescription(NSString*)hardware {
+- (NSString*)hardwareToDescription:(NSString*)hardware {
   NSString *hardwareDescription = [[deviceList objectForKey:hardware] objectForKey:@"name"];
   if (hardwareDescription) {
     return hardwareDescription;
