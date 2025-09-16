@@ -105,6 +105,20 @@
     return [self hardware];
 }
 
+/// 调试使用
+- (NSString*)hardwareToDescription(NSString*)hardware {
+  NSString *hardwareDescription = [[deviceList objectForKey:hardware] objectForKey:@"name"];
+  if (hardwareDescription) {
+    return hardwareDescription;
+  }
+  else {
+    //log message that your device is not present in the list
+    [self logMessage:hardware];
+    
+    return nil;
+  }
+}
+
 - (NSString*)hardwareDescription {
   NSString *hardware = [self hardwareString];
   NSString *hardwareDescription = [[deviceList objectForKey:hardware] objectForKey:@"name"];

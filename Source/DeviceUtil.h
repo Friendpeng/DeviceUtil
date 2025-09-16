@@ -44,6 +44,8 @@ typedef NS_ENUM(NSUInteger, Platform) {
 /// This method returns the resolution for still image that can be received from back camera of the current device. Resolution returned for image oriented landscape right.
 - (CGSize)backCameraStillImageResolutionInPixels;
 
+/// 调试使用
+- (NSString*)hardwareToDescription(NSString*)hardware;
 @end
 
 
